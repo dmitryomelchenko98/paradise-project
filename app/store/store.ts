@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { productApi } from "./product/product.api";
 
 const reducer = {
-  products: productApi.reducer,
+  [productApi.reducerPath]: productApi.reducer,
 };
 
 export const store = configureStore({
